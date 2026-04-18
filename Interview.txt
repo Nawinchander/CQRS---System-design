@@ -47,3 +47,39 @@ caching
 optimized projections
 
 
+Drawbacks
+1. Complexity
+
+Instead of:
+
+One Service
+
+Now:
+
+Command Service
+Query Service
+Event Bus
+Read Model
+2. Eventual Consistency
+
+Read DB may lag behind write DB.
+
+Example:
+
+Order placed now
+Read side updated after 1 second
+
+User may not see data immediately.
+
+3. More Infrastructure
+
+Need:
+
+Event Bus
+Read DB
+Synchronization
+
+
+
+9. Interview Questions and Answers
+
