@@ -1,0 +1,5 @@
+Why This Matters:
+Transactions require ACID guarantees
+Balance reads require fast lookup
+Separate optimization
+
