@@ -133,5 +133,19 @@ query model
 
 This improves scalability but increases complexity.
 
+Q7: How does CQRS help in microservices?
 
+Answer:
+
+Each service can optimize reads and writes independently, making microservices more scalable and maintainable.
+
+10. FAANG Interview Summary Answer
+
+If asked:
+
+"How would you explain CQRS in an interview?"
+
+Say:
+
+"CQRS separates write operations from read operations into command and query models. This helps scale reads and writes independently, optimize them differently, and is commonly used in high-scale distributed systems like order systems, feeds, and banking platforms. The tradeoff is higher complexity and eventual consistency."
 
