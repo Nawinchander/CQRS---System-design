@@ -22,6 +22,19 @@ class PlaceOrderCommand {
 /// Query Side
 
 
+class GetOrderHistoryQuery {
+  constructor(orderReadRepo) {
+    this.orderReadRepo = orderReadRepo;
+  }
+
+  execute(userId) {
+    return this.orderReadRepo.findByUser(userId);
+  }
+}
+
+
+//// Repository
+
 
 
 
