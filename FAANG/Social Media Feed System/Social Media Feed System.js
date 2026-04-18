@@ -34,4 +34,29 @@ class GetFeedQuery {
 
 /// Repo
 
+class PostRepo {
+  constructor() {
+    this.posts = [];
+  }
+
+  save(post) {
+    this.posts.push(post);
+  }
+
+  getFeed(userId) {
+    return this.posts.filter(p => p.userId === userId);
+  }
+}
+
+const repo = new PostRepo();
+
+const createPost = new CreatePostCommand(repo);
+const getFeed = new GetFeedQuery(repo);
+
+createPost.execute({ id: 1, userId: 100, content: "Hello CQRS" });
+
+console.log(getFeed.execute(100));
+
+
+
 
