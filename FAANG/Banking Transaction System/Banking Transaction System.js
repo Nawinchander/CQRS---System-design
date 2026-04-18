@@ -30,4 +30,32 @@ class GetBalanceQuery {
 
 //// Repo
 
+class AccountRepo {
+  constructor() {
+    this.accounts = {
+      A: 1000,
+      B: 500
+    };
+  }
+
+  transfer(from, to, amount) {
+    this.accounts[from] -= amount;
+    this.accounts[to] += amount;
+  }
+
+  getBalance(accountId) {
+    return this.accounts[accountId];
+  }
+}
+
+const repo = new AccountRepo();
+
+const transfer = new TransferMoneyCommand(repo);
+const getBalance = new GetBalanceQuery(repo);
+
+transfer.execute("A", "B", 200);
+
+console.log(getBalance.execute("A"));
+console.log(getBalance.execute("B"));
+
 
