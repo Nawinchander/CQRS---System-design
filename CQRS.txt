@@ -6,6 +6,22 @@ Queries → Handle read operations (Get, List, Search)
 Instead of using one model/service for both reads and writes, CQRS separates them.
 
 
+Basic Architecture
+
+Client
+   |
+   v
++-------------------+
+| API Gateway       |
++-------------------+
+    |           |
+    |           |
+    v           v
+Command Side   Query Side
+(Write DB)     (Read DB)
+
+
+
 
 
 
