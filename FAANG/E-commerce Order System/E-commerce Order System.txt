@@ -1,0 +1,9 @@
+Why FAANG Uses This?
+
+Because:
+
+Order writes require validation, inventory checks
+Order reads require fast search and pagination
+Reads and writes scale differently
+
+
