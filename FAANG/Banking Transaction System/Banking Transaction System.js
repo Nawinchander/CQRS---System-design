@@ -17,3 +17,17 @@ class TransferMoneyCommand {
 
 /// Query line
 
+class GetBalanceQuery {
+  constructor(accountRepo) {
+    this.accountRepo = accountRepo;
+  }
+
+  execute(accountId) {
+    return this.accountRepo.getBalance(accountId);
+  }
+}
+
+
+//// Repo
+
+
