@@ -7,6 +7,22 @@
 
 // Command Side
 
+class PlaceOrderCommand {
+  constructor(orderWriteRepo) {
+    this.orderWriteRepo = orderWriteRepo;
+  }
+
+  execute(order) {
+    this.orderWriteRepo.save(order);
+    console.log("Order placed");
+  }
+}
+
+
+/// Query Side
+
+
+
 
 
 
