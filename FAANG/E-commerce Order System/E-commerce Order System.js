@@ -35,6 +35,31 @@ class GetOrderHistoryQuery {
 
 //// Repository
 
+class OrderRepo {
+  constructor() {
+    this.orders = [];
+  }
+
+  save(order) {
+    this.orders.push(order);
+  }
+
+  findByUser(userId) {
+    return this.orders.filter(o => o.userId === userId);
+  }
+}
+
+const repo = new OrderRepo();
+
+const placeOrder = new PlaceOrderCommand(repo);
+const getHistory = new GetOrderHistoryQuery(repo);
+
+placeOrder.execute({ id: 1, userId: 101, item: "Laptop" });
+placeOrder.execute({ id: 2, userId: 101, item: "Phone" });
+
+console.log(getHistory.execute(101));
+
+
 
 
 
