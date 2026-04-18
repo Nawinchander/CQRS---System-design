@@ -1,0 +1,5 @@
+Real FAANG Benefit:
+Writes go to master DB
+Feed reads come from Redis / read replicas
+Massive read scaling
+
