@@ -83,3 +83,55 @@ Synchronization
 
 9. Interview Questions and Answers
 
+
+Q1: What is CQRS?
+
+Answer:
+
+CQRS is a design pattern that separates read operations (queries) from write operations (commands) so they can scale and evolve independently.
+
+Q2: Why use CQRS?
+
+Answer:
+
+To improve scalability, performance, and separation of concerns when read and write workloads differ significantly.
+
+Q3: What problem does CQRS solve?
+
+Answer:
+
+It solves the problem where reads and writes have different scaling needs and different optimization requirements.
+
+Q4: What is the downside of CQRS?
+
+Answer:
+
+It increases complexity, infrastructure overhead, and introduces eventual consistency.
+
+Q5: When should CQRS be used?
+
+Answer:
+
+Use CQRS in:
+
+High read/write scale systems
+Distributed systems
+Event-driven systems
+
+Not for simple CRUD apps.
+
+Q6: CQRS vs CRUD?
+
+Answer:
+
+CRUD uses one model for reads/writes.
+
+CQRS separates:
+
+command model
+query model
+
+This improves scalability but increases complexity.
+
+
+
