@@ -12,4 +12,38 @@ Scale query servers separately.
 
 2. Better Performance
 
+Use:
+
+SQL DB for writes
+Redis / ElasticSearch for reads
+3. Better Separation of Concerns
+
+Write logic:
+
+validation
+transactions
+business rules
+
+Read logic:
+
+caching
+optimized projections
+
+Use:
+
+SQL DB for writes
+Redis / ElasticSearch for reads
+3. Better Separation of Concerns
+
+Write logic:
+
+validation
+transactions
+business rules
+
+Read logic:
+
+caching
+optimized projections
+
 
