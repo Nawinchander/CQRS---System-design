@@ -1,0 +1,15 @@
+Advantages of CQRS
+1. Independent Scaling
+
+Read traffic can be much higher than write traffic.
+
+Example:
+
+1 write/sec
+10,000 reads/sec
+
+Scale query servers separately.
+
+2. Better Performance
+
+
