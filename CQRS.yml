@@ -11,3 +11,15 @@ One service handles both reads and writes.
 
 In CQRS:
 
+In CQRS:
+
+Command Side:
+ - CreateUserCommand
+ - UpdateUserCommand
+
+Query Side:
+ - GetUserQuery
+ - ListUsersQuery
+
+This separation helps scale reads and writes independently.
+
