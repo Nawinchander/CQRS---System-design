@@ -21,4 +21,17 @@ class CreatePostCommand {
 
 //// Query Side
 
+class GetFeedQuery {
+  constructor(postRepo) {
+    this.postRepo = postRepo;
+  }
+
+  execute(userId) {
+    return this.postRepo.getFeed(userId);
+  }
+}
+
+
+/// Repo
+
 
