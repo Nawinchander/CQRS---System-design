@@ -1,0 +1,11 @@
+CQRS (Command Query Responsibility Segregation) is a system design pattern where:
+
+Commands → Handle write operations (Create, Update, Delete)
+Queries → Handle read operations (Get, List, Search)
+
+Instead of using one model/service for both reads and writes, CQRS separates them.
+
+
+
+
+

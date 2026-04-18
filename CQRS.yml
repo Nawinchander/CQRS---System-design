@@ -1,0 +1,13 @@
+1. Why CQRS?
+
+In normal CRUD architecture:
+
+UserService:
+ - createUser()
+ - getUser()
+ - updateUser()
+
+One service handles both reads and writes.
+
+In CQRS:
+
